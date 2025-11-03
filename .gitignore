@@ -13,3 +13,103 @@ __pycache__/
 *.model
 *.npy
 *.npz
+# ==============================
+# 🔹 FASTAPI + MACHINE LEARNING
+# ==============================
+
+# Ambientes virtuais
+venv/
+.env/
+.env.bak/
+*.env
+
+# Cache e bytecode do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs e relatórios temporários
+*.log
+*.out
+*.tmp
+*.bak
+
+# Arquivos de pacotes e dependências
+*.egg-info/
+.eggs/
+dist/
+build/
+wheels/
+
+# Dados e modelos (grandes ou sensíveis)
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.json
+*.xml
+*.zip
+*.rar
+*.tar
+*.gz
+*.bz2
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+*.model
+*.bin
+*.npy
+*.npz
+*.db
+*.sqlite
+*.parquet
+
+# Pesados de ML / AI
+*.pt
+*.onnx
+*.ckpt
+*.pb
+*.so
+*.dll
+*.dylib
+
+# Arquivos específicos de GPU e libs nativas
+*.cu
+*.cubin
+*.ptx
+*.ncc
+*.nvs
+*.nccl*
+*.cuda*
+*.xgboost*
+*.catboost*
+
+# IDEs e sistemas
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Notebooks e checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# Configurações temporárias do Codespaces e Railway
+*.code-workspace
+*.devcontainer
+*.replit
+*.railway
+*.render
+*.envrc
+*.local
+
+# Diretórios de testes e cache
+.cache/
+pytest_cache/
+coverage/
+htmlcov/
+
+# ==============================
+# 🔸 FIM DO ARQUIVO
+# ==============================
