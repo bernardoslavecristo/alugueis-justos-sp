@@ -6,8 +6,10 @@ import numpy as np
 
 app = FastAPI(title="Aluguéis Justos SP", version="2.0")
 
-# Carregar o modelo treinado
-model = joblib.load("model.pkl")
+import os
+model_path = os.path.join(os.path.dirname(__file__), "..", "model.pkl")
+model = joblib.load(model_path)
+
 
 # Modelo de entrada
 class InputData(BaseModel):
@@ -73,3 +75,17 @@ def predict_future(data: InputData, annual_growth_rate: float = 0.035):
     except Exception as e:
         # Loga o erro e retorna resposta tratada
         return {"erro": str(e), "status": "falha"}
+    
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+
+# Montar rota estática da pasta 'web'
+app.mount("/web", StaticFiles(directory="web"), name="web")
+
+@app.get("/", response_class=HTMLResponse)
+def home():
+    with open("web/index.html", "r", encoding="utf-8") as f:
+        return f.read()
+
+
+
